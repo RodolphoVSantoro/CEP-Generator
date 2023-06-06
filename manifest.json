@@ -1,0 +1,30 @@
+{
+  "name": "Cep generator",
+  "description": "Gera CEPs aleatórios para testes",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup/cep.html"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/cep.js"
+      ],
+      "matches": [
+        "http://127.0.0.1/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "ceps/cep.bin"
+      ],
+      "matches": [
+        "http://127.0.0.1/*"
+      ]
+    }
+  ],
+  "icons": { "16": "images/icon.png", "48": "images/icon.png", "128": "images/icon.png" }
+}
