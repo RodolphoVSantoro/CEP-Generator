@@ -9,7 +9,7 @@ function getRandomCep(CepBinary) {
 	const ceps = new Int32Array(CepBinary);
 	const cepsView = new DataView(CepBinary);
 	const random = Math.floor(Math.random() * ceps.length);
-	const cep = cepsView.getInt32(random * 4).toString().padStart(8, '0');
+	const cep = cepsView.getInt32(random * 4, true).toString().padStart(8, '0');
 	const formattedCEP = cep.slice(0, 5) + '-' + cep.slice(5, 8);
 	return formattedCEP;
 }
