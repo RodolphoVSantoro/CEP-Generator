@@ -8,8 +8,16 @@
         cursor: pointer;
         background-color: #d5d5d5;
       }
+      #CPFButton:hover{
+        cursor: pointer;
+      }
+      #CPFButtonCopy:hover {
+        cursor: pointer;
+        background-color: #d5d5d5;
+      }
     </style>
     <script src="../scripts/cep.js"></script>
+    <script src="../scripts/cpf.js"></script>
   </head>
   <body style="width: 250px; height: 50px; flex-direction: column; display: flex;">
     <div style="display: flex; justify-content: space-evenly;">
@@ -31,6 +39,28 @@
         alt="copy to clipboard"
         class="copy_icon"
         style="height:35px; width: 40px;"
+      >
+    </div>
+
+    <div style="display: flex; justify-content: space-evenly;">
+      <input 
+        id="CPFButton"
+        type="button"
+        value="Generate CPF"
+        style="height: 50px;min-width: 200px;"
+      >
+    </div>
+    <div style="display: flex; justify-content: space-evenly;">
+      <label 
+        id="CPFLabel" 
+        style="font-size: 24px;min-width: 100px;"
+      ></label>
+      <img 
+        id="CPFButtonCopy"
+        src="../images/clipboard.svg"
+        alt="copy to clipboard"
+        class="copy_icon"
+        style="height:35px; width: 40px;margin-bottom: 10px;"
       >
     </div>
   </body>
